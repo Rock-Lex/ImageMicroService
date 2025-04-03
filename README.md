@@ -7,6 +7,7 @@ This is an asynchronous image processing microservice built with FastAPI. It han
 - Image conversion to WebP format and compression with Pillow
 - Upload status tracking in Redis
 - Secure authentication using JWT (RS256)
+- Filenames act as unique IDs using UUID4 (32 characters long)
 
 ## Installation
 
@@ -55,6 +56,12 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ### Download Processed Image
 - **Endpoint:** `GET /{filename}`
 - **Description:** Retrieves the processed WebP image. Checks the upload status in Redis (status code 202 if still being uploaded).
+
+### Update image on filename
+- **Endpoint:** `PUT /{filename}`
+
+### Delete image on filename
+- **Endpoint:** `DELETE /{filename}`
 
 ## Security
 - JWT authentication with RS256 algorithm
