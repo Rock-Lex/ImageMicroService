@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pillow
+pillow_heif
+python-multipart
+redis
+
+# Security
+pyjwt==2.4.0
+cryptography
+python-dotenv==0.19.2
+
+# Loggin
+loguru
+termcolor
